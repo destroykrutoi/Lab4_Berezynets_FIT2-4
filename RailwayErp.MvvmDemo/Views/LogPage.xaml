@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:RailwayErp.MvvmDemo.ViewModels"
+             x:Class="RailwayErp.MvvmDemo.Views.LogPage"
+             x:DataType="vm:LogViewModel"
+             Title="Журнал подій">
+
+    <CollectionView Margin="16" ItemsSource="{Binding Entries}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="x:String">
+                <Label Text="{Binding .}" FontFamily="Consolas" FontSize="13" Margin="0,2" />
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>
